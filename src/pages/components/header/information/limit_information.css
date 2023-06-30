@@ -1,0 +1,39 @@
+.limit-information {
+    font-size: 10px;
+    height: 63px;
+    width: 175px;
+    /* border: 2px solid #000; */
+    display: flex;
+    justify-content: center;
+    /* background-color: #D9D9D9; */
+    background-color: #ebebeb;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.limit-information__content_used {
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.limit-information__content_limit {
+    color: #8AC540;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.rotate-animation {
+    animation: rotate 2s linear infinite;
+}

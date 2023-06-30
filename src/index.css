@@ -1,0 +1,39 @@
+
+@font-face {
+  font-family: Inter;
+  src: url("./fonts/Inter-Light.ttf") format('truetype');
+}
+@font-face {
+  font-family: ferry;
+  src: url("./fonts/ferry_black.otf") format('opentype');
+}
+
+:root {
+  --font-Inter: Inter;   /* основной */
+  --font-ferry: ferry;
+
+  --color_main_white:#ffffff;
+  --color_main_black:#000000;
+  --color_main_Dark-Cyan:#029491;
+
+  --color_additional_Light-Cyan:#7CE3E1;
+  --color_additional_blue:#5970FF;
+  --color_additional_orange:#FFB64F;
+
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-Inter);
+
+}
+
+a {
+  color: inherit; 
+  text-decoration: none;
+}
+/* code {} // встроенный элемент HTML и используется для обозначения фрагмента кода или текста, */
+
+p {
+  margin: 0;
+}
