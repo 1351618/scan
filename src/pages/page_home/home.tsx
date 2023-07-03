@@ -7,10 +7,16 @@ import Group14 from "./Group 14.png";
 
 import OurRates from './our_rates/our_rates';
 import WhyAreWe from './why_are_we/why_are_we';
+import { useNavigate } from 'react-router-dom';
 
-// import icons_chevron_left "./"
 
 function Home() {
+    const navigate = useNavigate();
+
+    const handleButtonClick = () => {
+        navigate('/search');
+    }
+
     return (
         <>
             <Header />
@@ -19,7 +25,7 @@ function Home() {
                     <div className="home__headline_block">
                         <p className="home__headline_block-p">сервис по поиску публикаций о компании по его ИНН</p>
                         <span className="home__headline_block-span">Комплексный анализ публикаций, получение данных в формате PDF на электронную почту.</span>
-                        <button className="home__headline_block-button">Запросить данные</button>
+                        <button className="home__headline_block-button" onClick={handleButtonClick}>Запросить данные</button>
                     </div>
                     <img className="home__headline_img" src={Group13} alt="" />
                 </div>
