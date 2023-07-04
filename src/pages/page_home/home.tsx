@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import Header from '../components/header/header';
 import Footer from '../components/footer/footer';
 import './home.css';
@@ -8,9 +8,12 @@ import Group14 from "./Group 14.png";
 import OurRates from './our_rates/our_rates';
 import WhyAreWe from './why_are_we/why_are_we';
 import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../AuthContext';
 
 
 function Home() {
+
+    const { authInfo, setAuthInfo } = useContext(AuthContext);
     const navigate = useNavigate();
 
     const handleButtonClick = () => {
@@ -25,7 +28,16 @@ function Home() {
                     <div className="home__headline_block">
                         <p className="home__headline_block-p">сервис по поиску публикаций о компании по его ИНН</p>
                         <span className="home__headline_block-span">Комплексный анализ публикаций, получение данных в формате PDF на электронную почту.</span>
-                        <button className="home__headline_block-button" onClick={handleButtonClick}>Запросить данные</button>
+                        
+                        {/* ========================================== */}
+                        <div className="home__headline_block_div">
+                            <button className="home__headline_block_div-button" 
+                                onClick={handleButtonClick}
+                                style={{ display: authInfo.isAuthenticated ? '' : 'none' }}>
+                                    Запросить данные
+                            </button>
+                        </div>
+                        {/* ========================================== */}
                     </div>
                     <img className="home__headline_img" src={Group13} alt="" />
                 </div>

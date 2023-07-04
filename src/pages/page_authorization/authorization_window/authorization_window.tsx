@@ -1,22 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './authorization_window.css';
 import google from "./google.png"
 import facebook from "./facebook.png"
 import yandex from "./yandex.png"
 import { useNavigate } from 'react-router-dom';
-
-
+import { AuthContext } from '../../../AuthContext';
 
 function AuthorizationWindow() {
 
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
   const [isButtonActive, setIsButtonActive] = useState(false);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [accessToken, setAccessToken] = useState(""); // сохраняем токен
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [expire, setExpire] = useState(""); // сохраняем дату
   const [errorLogin, setErrorLogin] = useState(false)
   const [errorPassword, setErrorPassword] = useState(false)
   const navigate = useNavigate();
+  const { setAuthInfo } = useContext(AuthContext);
+
 
 
   const handleInputChange = (event:any) => {
@@ -51,19 +54,30 @@ function AuthorizationWindow() {
         }
       })
       .then(data => {
-        console.log(data); // Вывод данных ответа в консоль
+        // console.log(data); // Вывод данных ответа в консоль
         setAccessToken(data.accessToken); // Сохранение токена в состоянии
-        console.log(accessToken)
+        // console.log(accessToken)
         setExpire(data.expire); // Сохранение срока истечения в состоянии
-        console.log(expire)
-        // Дополнительный код для обработки данных
+        // console.log(expire)
+// ===========================================================================================
+// данные для определения авторизованного пользователя 
+        const authInfo = {
+          isAuthenticated: data.accessToken !== "",
+          token: data.accessToken,
+          expire: data.expire
+        };
+        // console.log(authInfo);
+        setAuthInfo(authInfo); // передаем в глобальную переменную
+// ===========================================================================================
         navigate('/');
+        
       })
+
+
       .catch(error => {
         console.error('Ошибка при выполнении запроса:', error);
         setErrorLogin(true);
         setErrorPassword(true);
-        // Дополнительный код для обработки ошибки
       });
   };
 

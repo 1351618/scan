@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './limit_information.css';
 import load_spin from "./load_spin.png"
+import { AuthContext } from '../../../../AuthContext';
 
 function ImitInformation() {
+
+    const { authInfo, setAuthInfo } = useContext(AuthContext);
+
     return (
-        <div className="limit-information">
+        <div className="limit-information"
+        style={{ display: authInfo.isAuthenticated ? '' : 'none' }}
+        >
 
             <div className="limit-information__content"
                 style={{display: "none"}}

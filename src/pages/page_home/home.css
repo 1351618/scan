@@ -26,7 +26,11 @@
     margin: 6vw 0px 3vw 0px;
 }
 
-.home__headline_block-button {
+.home__headline_block_div {
+    height: 60px;
+    width: 335px;
+}
+.home__headline_block_div-button {
     background-color: var(--color_additional_blue);
     height: 60px;
     width: 335px;
