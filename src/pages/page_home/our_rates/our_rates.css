@@ -103,9 +103,20 @@
     font-weight: bold;
 }
 /* кнопка */
-.our-rates__element_block-element_button {
+.our-rates__element_block-element_button-more {
     background-color: #5970FF;
     color: aliceblue;
+    width: 355px;
+    height: 60px;
+    border: none;
+    border-radius: 5px;
+    margin: 20px;
+    font-size: 20px;
+}
+
+.our-rates__element_block-element_button-go-account {
+    background-color: #7f7f7f66;
+    color: #000000;
     width: 355px;
     height: 60px;
     border: none;

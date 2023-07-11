@@ -37,3 +37,19 @@ a {
 p {
   margin: 0;
 }
+
+/* Убирает стандартную рамку при фокусе input */
+input:focus {
+  outline: none; 
+}
+
+select:focus {
+  outline: none;
+}
+.App{
+  position: relative;
+  padding-bottom: 137px;
+  min-height: 100vh;
+  /* запрет на растягивание  блока падинга */
+  box-sizing: border-box;  
+}

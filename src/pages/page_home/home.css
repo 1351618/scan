@@ -1,6 +1,4 @@
-/* .home {
-    margin: 0px 6vw;
-} */
+
 
 .home__headline {
     display: flex;
@@ -63,4 +61,9 @@
 .home__our-rates {
     margin: 0px 4vw;
     /* border: 2px solid #000; */
+}
+
+
+.home {
+    /* display: none; */
 }

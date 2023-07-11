@@ -1,13 +1,25 @@
-import React from 'react';
+import React, {useContext} from 'react';
+
 import Header from '../components/header/header';
 import Footer from '../components/footer/footer';
 import './search.css';
 // import lock from "./lock.png"
 import search_img from "./search_img.png"
 import SearchPlaceholder from './search_placeholder/search_placeholder';
+import { AuthContext } from '../../AuthContext';
+
+
 
 
 function Search() {
+
+    const { authInfo, setAuthInfo } = useContext(AuthContext);
+    if (authInfo.isAuthenticated === false ) {
+        window.location.href = '/';
+    }
+
+
+
     return (
         <>
             <Header />

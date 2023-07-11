@@ -1,0 +1,23 @@
+@media (min-width: 375px) {
+  .header {
+    background-color: #ffffff;
+      height: 93px;
+      padding: 0px 6vw;
+      justify-content: space-between;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+  }
+
+  .header__navigation {
+    display: none;
+  }
+
+  .header__block-account {
+    display: none;
+  }
+
+  .header__navigation_mini {
+    display: block;
+  }
+}

@@ -1,5 +1,5 @@
 .general-summary{
-    border: 2px solid #f20b0b;
+    /* border: 2px solid #f20b0b; */
     margin: 0vw 2vw;
 }
 
@@ -16,15 +16,16 @@
 } 
 
 .general_summary__table {
-    border: 2px solid #c8f20b;
+    /* border: 2px solid #c8f20b; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    margin-top: 1vw;
 }
 
 .general_summary__table-block {
-    border: 2px solid var(--color_main_Dark-Cyan);
+    border: 3px solid var(--color_main_Dark-Cyan);
     height: 158px;
     display: flex;
     flex-direction: row;
