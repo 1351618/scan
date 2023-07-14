@@ -13,7 +13,7 @@ import { AuthContext } from '../../AuthContext';
 
 function Search() {
 
-    const { authInfo, setAuthInfo } = useContext(AuthContext);
+    const { authInfo } = useContext(AuthContext);
     if (authInfo.isAuthenticated === false ) {
         window.location.href = '/';
     }
@@ -23,31 +23,23 @@ function Search() {
     return (
         <>
             <Header />
-            <div className="search">
-
-                <div className="search__content">
-
-                    <div className="search__content_element">
-                        <p className='search__content_element-p'>
-                            Найдите необходимые  <br /> 
-                            данные в пару кликов.
-                        </p>
-                        <span  className='search__content_element-span'>
-                            Задайте параметры поиска. <br />
-                            Чем больше заполните, тем точнее поиск
-                        </span>
-                        <div className='search__content_element-placeholder'>
-                            <SearchPlaceholder/>
-                        </div>
-                    </div>
-
-                    <img className='search__img' src={search_img} alt="" />
+            <div className="search-titl">
+                <div className="search__content_element">
+                    <p className='search__content_element-title'>
+                        Найдите необходимые  <br /> 
+                        данные в пару кликов.
+                    </p>
+                    <p  className='search__content_element-text'>
+                        Задайте параметры поиска. <br />
+                        Чем больше заполните, тем точнее поиск
+                    </p>
                 </div>
             </div>
-            
-            <div className="search__footer">
-                <Footer />
+            <div className="search-cont">
+                <SearchPlaceholder/>
+                <img className='search__img' src={search_img} alt="" />
             </div>
+            <Footer />
         </>
     );
 }

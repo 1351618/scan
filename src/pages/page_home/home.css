@@ -64,6 +64,16 @@
 }
 
 
-.home {
-    /* display: none; */
+@media (max-width: 768px) {
+
+    .home__headline_block-p {
+        font-size: 28px;
+    }
+
+    .home__headline_img {
+        max-width: 347px;
+    }
+
+    
+    
 }

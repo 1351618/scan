@@ -126,11 +126,28 @@
 }
 
 
-@media (max-width: 1000px) {
+@media (max-width: 768px) {
     .our-rates__element_block {
         display: flex;
         flex-wrap: nowrap;
         flex-direction: column;
         align-items: center;
       }
+
+      .our-rates__element-p {
+        font-size: 28px;
+    }
+
+      .our-rates__element_block-element {
+        width: 335px;
+      }
+
+
+      .our-rates__element_block-element_button-go-account {
+        width: 286px;
+      }
+
+      .our-rates__element_block-element_button-more {
+        width: 286px;
+    }
 }

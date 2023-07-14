@@ -135,12 +135,54 @@
 
 
 /* ------------------------------------------------------------------------------------ */
-@media (max-width: 1390px) {
+@media (max-width: 768px) {
+    .search-results__title_block p {
+        font-size: 28px;
+        padding: 2vw 2vw;
+    }
+
+    .search-results__title img {
+        width: 350px;
+    }
+
+    .general-summary_p {
+        font-size: 28px;
+    }
+
+    .search-results__list-documents {
+        font-size: 28px;
+    }
+
+
     .search-results__block-documents {
         grid-template-columns: repeat(1, minmax(200px, 1fr));
     }
 
     .search-results__block-documents_stule {
-        max-width: 100%;
+        max-width: 98%;
+    }
+
+    .search-results__block-documents_stule_date-source {
+        font-size: 14px;
+    }
+
+    .search-results__block-documents_stule_article-title {
+        font-size: 19px;
+    }
+
+    .search-results__block-documents_stule_span {
+        font-size: 12px;
+    }
+
+    .search-results__block-documents_stule_tech-news {
+        font-size: 10px;
+        height: 20px;
+        width: 132px;
+    }
+
+    .search-results__block-documents_stule_read-words_button {
+        height: 40px;
+        width: 195px;
+        font-size: 14px;
     }
 }

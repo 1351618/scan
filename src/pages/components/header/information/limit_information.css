@@ -51,3 +51,23 @@
 .rotate-animation {
     animation: rotate 2s linear infinite;
 }
+
+
+
+@media (max-width: 768px) {
+
+    .limit-information {
+        padding: 0px 1vw;
+    }
+
+    .limit-information__content {
+        margin: 0;
+    }
+
+    .content-text {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+}

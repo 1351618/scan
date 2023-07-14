@@ -45,3 +45,18 @@
     font-size: 18px;
     font-weight: bold;
   }
+
+  @media (max-width: 768px) {
+
+    .why-are-we__p {
+        font-size: 28px;
+    }
+
+    .why-are-we__window_element_items {
+        width: auto;
+        min-width: 200px;
+        max-width: 295px;
+        word-break: break-word;
+    }
+
+  }

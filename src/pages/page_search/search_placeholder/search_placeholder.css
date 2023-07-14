@@ -1,109 +1,151 @@
 .search-placeholder {
-    /* border: 6px solid #dfee09; */
-    display: flex;
-    flex-direction: row;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border-radius: 10px;
+  align-content: space-around;
 }
-
-
-
-  
-
-
 
 .search-placeholder__block {
-    border: 1px solid #ee09c8;
-    width: 410px;
-    height: 520px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  max-width: 410px;
+  height: 520px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-.search-placeholder__block input:invalid:not(:placeholder-shown) {
-    border: 3px solid #ff0000;
-  }
-
-
-
 .search-placeholder__block-title {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .search-placeholder__block-section {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-placeholder__block-input {
+  display: flex;
 }
 
 .search-placeholder__block-section_input {
-    width: 242px;
-    margin-right: 20px;
-    height: 43px;
-    border-radius: 5px;
-    border-color: hsla(0, 0%, 0%, 0.303);
-    text-align: center;
-    font-size: 14px;
+  width: 242px;
+  margin-right: 20px;
+  height: 43px;
+  border-radius: 5px;
+  border-color: hsla(0, 0%, 0%, 0.303);
+  text-align: center;
+  font-size: 14px;
 }
+
 .search-placeholder__block-section_invalid {
-    height: 20px;
+  height: 20px;
 }
+
 .search-placeholder__block-section_invalid-p {
-    font-size: 14px;
-    color: #ff0000;
-    margin-left: 22px;
+  font-size: 14px;
+  color: #ff0000;
+  margin-left: 22px;
+}
+
+.invalid-input {
+  border: 3px solid #ff0000;
 }
 
 .search-placeholder__block-select {
-    width: 242px;
-    margin-right: 20px;
-    height: 43px;
-    border-radius: 5px;
-    border-color: hsla(0, 0%, 0%, 0.303);
-    text-align: center;
-    font-size: 14px;
+  width: 242px;
+  margin-right: 20px;
+  height: 43px;
+  border-radius: 5px;
+  border-color: hsla(0, 0%, 0%, 0.303);
+  text-align: center;
+  font-size: 14px;
 }
 
-
-
 .search-placeholder__block_checkbox-text {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 10px;
 }
 
 .search-placeholder__block_checkbox-text input {
- height: 18px;
- width: 18px;
+  height: 18px;
+  width: 18px;
 }
 
 .search-placeholder__block_checkbox-text label {
- font-size: 18px;
- margin-left: 15px;
+  font-size: 18px;
+  margin-left: 15px;
 }
 
 .search-placeholder__block_button button {
-    height: 60px;
-    width: 300px;
-    border-radius: 5px;
-    color: #fff;
-    background-color: #5970FF;
-    border: none;
-    font-size: 22px;
-    margin: 100px 0px 0px 100px;
+  height: 60px;
+  width: 300px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #5970ff;
+  border: none;
+  font-size: 22px;
 }
 
 .search-placeholder__block_button p {
-    font-size: 14px;
-    margin: 5px 0px 0px 130px;
+  font-size: 14px;
+  margin-top: 5px;
 }
 
+.search-placeholder__block_button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  cursor: pointer;
+}
 
+.button_search.inactive {
+  /* Стили неактивной кнопки */
+  /* Например, изменение фона или цвета текста */
+  background-color: #dddddd;
+  color: #999999;
+  cursor: not-allowed;
+}
 
-/* @media (max-width: 1000px) {
-    .search-placeholder {
-        display: flex;
-        flex-direction: column;
-    }
-} */
+@media (max-width: 768px) {
+  .search-placeholder {
+    flex-direction: column;
+  }
+
+  .search-placeholder__block {
+    align-items: center;
+  }
+
+  .search-placeholder__block-input {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .search-placeholder__block-section_input {
+    width: 242px;
+    margin-right: 0;
+  }
+
+  .search-placeholder__block.block-checkbox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 185px;
+    width: auto;
+  }
+
+  .search-placeholder__block_checkbox-text {
+    display: none;
+  }
+
+  element.style {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
